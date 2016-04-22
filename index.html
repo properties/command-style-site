@@ -1,18 +1,3 @@
-<?php
-
-  require_once 'detectMobile.php';
-  $detect = new Mobile_Detect;
-
-  if( $detect->isMobile() && !$detect->isTablet() )
-  {
-    echo "My website does not fully work on a mobile yet, please try on a tablet or or any bigger size screen.";
-    exit();
-  }
-
-  $cmd = $_GET["cmd"];
-
-
-?>
 <!-- https://github.com/properties/command-style-site -->
 <html>
 <head>
