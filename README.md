@@ -2,6 +2,8 @@
 
 A simple light-weight command style looking website, working with jquery and PHP.
 
+![alt tag](http://gy.ee/3o+5.gif)
+
 # Examples
 
 In the postCommand.php file you can add commands simple as this:
