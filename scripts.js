@@ -44,7 +44,10 @@
      return;
    }
 
-   if(this.currentText == "") this.element.innerHTML = "";
+   if(this.currentText == "") 
+   { 
+    this.element.innerHTML = "";
+   }
 
    if(this.currentChar < this.origText.length)
    {
