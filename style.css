@@ -84,11 +84,8 @@
 
   div
   {
-
     outline: 0px solid yellow;
     float: left;
-
-
   }
 
   div:nth-child(1)
@@ -123,7 +120,6 @@
       padding: 2em;
     }
   }
-
 
   .portfolio
   {
