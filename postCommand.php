@@ -12,6 +12,7 @@
     $returnEcho["speed"]    = $speed;
     echo json_encode($returnEcho);
     exit();
+    
   }
 
   if(empty($command))
@@ -28,19 +29,19 @@
       $checkBefore = str_split($fullCommand[2], 7);
       if($checkBefore[0] == "http://" || $checkBefore[0] == "https:/")
       {
-          $bronCode = file_get_contents($fullCommand[2]);
+          $sourceCode = file_get_contents($fullCommand[2]);
       }
       else
       {
-        $bronCode = file_get_contents("http://" . $fullCommand[2]);
+        $sourceCode = file_get_contents("http://" . $fullCommand[2]);
       }
 
-      if(!empty($bronCode))
+      if(!empty($sourceCode))
       {
 
         $highCode = curl_init('https://tohtml.com/');
         curl_setopt( $highCode, CURLOPT_POST, 1);
-        curl_setopt( $highCode, CURLOPT_POSTFIELDS, 'style=black&code_src=' . urlencode($bronCode));
+        curl_setopt( $highCode, CURLOPT_POSTFIELDS, 'style=black&code_src=' . urlencode($sourceCode));
         curl_setopt( $highCode, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt( $highCode, CURLOPT_HEADER, 0);
         curl_setopt( $highCode, CURLOPT_RETURNTRANSFER, 1);
