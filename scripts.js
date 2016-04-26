@@ -15,6 +15,7 @@
    this.cursor = ( cursor ? cursor : "" );
    this.currentText = "";
    this.currentChar = 0;
+   
    this.element.MatthewCore = this;
    
    if(this.element.id == "") this.element.id = " MatthewCore" + MatthewCore.currentIndex++;
