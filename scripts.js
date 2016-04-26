@@ -72,10 +72,12 @@
    }
    else
    {
+    
      this.currentText = "";
      this.currentChar = 0;
      this.running = false;
      this.finishedCallback();
+     
    }
  }
 
