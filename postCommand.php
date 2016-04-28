@@ -47,7 +47,7 @@
         curl_setopt( $highCode, CURLOPT_HEADER, 0);
         curl_setopt( $highCode, CURLOPT_RETURNTRANSFER, 1);
         
-        $fullCode = curl_exec( $highCode );
+        $fullCode = curl_exec($highCode);
 
         $pregMatch = preg_match_all("/<div style=\"overflow: scroll; width: 100%;\">(.*?)<\/div>/s", $fullCode, $htmlCode);
         $finalCode = str_replace("background:", "matth:", $htmlCode[1][0]);
