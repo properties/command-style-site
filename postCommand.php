@@ -40,11 +40,13 @@
       {
 
         $highCode = curl_init('https://tohtml.com/');
+        
         curl_setopt( $highCode, CURLOPT_POST, 1);
         curl_setopt( $highCode, CURLOPT_POSTFIELDS, 'style=black&code_src=' . urlencode($sourceCode));
         curl_setopt( $highCode, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt( $highCode, CURLOPT_HEADER, 0);
         curl_setopt( $highCode, CURLOPT_RETURNTRANSFER, 1);
+        
         $fullCode = curl_exec( $highCode );
 
         $pregMatch = preg_match_all("/<div style=\"overflow: scroll; width: 100%;\">(.*?)<\/div>/s", $fullCode, $htmlCode);
