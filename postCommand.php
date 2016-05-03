@@ -17,7 +17,7 @@
 
   if(empty($command))
   {
-    sendEcho("Do you expect me to understand that?", 40);
+    sendEcho("Do you expect me to understand that??", 40);
   }
 
 
