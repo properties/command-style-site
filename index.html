@@ -44,24 +44,19 @@ Made by github/properties
       if(keyDown == 13) key.preventDefault();
       if(keyDown == 13)
       {
-      
         $('#portfolio').html("Matth.ee/w > Loading..");
         Command = $(this).val();
         $(".typ").val('');
-
         var cmd = Command.split(" ");
         if(cmd[0] + cmd[1] == "setspeed")
         {
           dataSpeed = cmd[2];
           setSpeed = true;
         }
-
         $.post( "postCommand.php", { command:Command }, function( data )
         {
           $('#portfolio').html(data.message);
-
           if(setSpeed == false) dataSpeed = data.speed;
-
           new MatthewCore(document.getElementById("portfolio"), dataSpeed);
           MatthewCore.runAll();
 
