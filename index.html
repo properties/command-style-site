@@ -32,11 +32,9 @@ Made by github/properties
   </div>
   <div id="portfolio" class="portfolio">Matth.ee/w > Enter your command left. Type "help" for all commands.</div>
   <script>
-
     var Command = '';
     var dataSpeed = 40;
     var setSpeed = false;
-
     $(".typ") . keydown( function (key)
     {
       var keyDown = key.which;
@@ -59,7 +57,6 @@ Made by github/properties
           if(setSpeed == false) dataSpeed = data.speed;
           new MatthewCore(document.getElementById("portfolio"), dataSpeed);
           MatthewCore.runAll();
-
         }, "json");
       }
     });
