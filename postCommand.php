@@ -20,7 +20,6 @@
     sendEcho("Do you expect me to understand that??", 40);
   }
 
-
   if($fullCommand[0] == "get")
   {
     if($fullCommand[1] == "website")
