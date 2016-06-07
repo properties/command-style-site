@@ -2,7 +2,7 @@
 
 A simple light-weight command style looking website, working with jquery and PHP.
 
-![alt tag](http://gy.ee/3o+5.gif)
+![alt tag](http://i.imgur.com/sNAz4o0.gifv)
 
 # Examples
 
